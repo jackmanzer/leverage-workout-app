@@ -1,0 +1,33 @@
+    <div class="row"></div> 
+      //workout columns
+      <div class="addWorkout">
+        <div class="workoutName"></div>
+        <input type="text" class="workout">
+        <button class="saveBtn">Submit</button>
+        <ul class = "workoutList"></ul>
+
+      </div>
+
+      <!--This is for the container that will hold both the current weather and the five day forecast-->
+      <div class="scheduleContainer">
+
+        <div class="scheduleHeader">
+            <div class="sevenDaySchedule"></div>
+            <div class="?">
+                <div class="card-deck">
+                {{!-- <${generateCards(data)}> --}}
+                <div class=dayCard id=monday></div>
+                <div class=dayCard id=tuesday></div>
+                <div class=dayCard id=wednesday></div>
+                <div class=dayCard id=thursday></div>
+                <div class=dayCard id=friday></div>
+                <div class=dayCard id=saturday></div>
+                <div class=dayCard id=sunday></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+{{!-- get file path correct here --}}
+    <script src="./js/schedule.js"></script>
