@@ -6,12 +6,14 @@ CREATE TABLE user (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_title VARCHAR(100) NOT NULL,
     user_password VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
+    user_email VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE workout (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  workout_name VARCHAR(100) NOT NULL
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    workout_name VARCHAR(100) NOT NULL,
+    FOREIGN KEY (user_id)
+    REFERENCES user(id)
 );
 
 CREATE TABLE exercises (
@@ -23,7 +25,6 @@ CREATE TABLE exercises (
     workout_id INT,
     FOREIGN KEY (workout_id)
     REFERENCES workout(id)
-    ON DELETE SET NULL
 );
 
 
