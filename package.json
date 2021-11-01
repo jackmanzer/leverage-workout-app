@@ -1,0 +1,23 @@
+{
+  "name": "t8100x",
+  "version": "1.0.0",
+  "description": "Been eating like Cookie Monster for too long? Get our new app, the t8100x. We will help you pump yourself up.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build public/src/style.css -o public/dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackmanzer/t8100x.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackmanzer/t8100x/issues"
+  },
+  "homepage": "https://github.com/jackmanzer/t8100x#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}
