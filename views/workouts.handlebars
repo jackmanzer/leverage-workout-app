@@ -1,0 +1,56 @@
+<div class="workoutsPage"></div>
+<h1>{{workoutTitle}}</h1>
+
+{{!-- add exercise button with input field to add a name of the exercise (arm curls, squats, etc--}}
+<div> 
+    <div>
+        <button class="addExercise">ADD EXERCISE</button>
+    </div>
+    <div>
+{{!-- when add exercise button is clicked, then a menu appears --}}
+{{!-- on menu, you can input number of sets, number of reps, and weight lifted --}}
+    </div>
+</div>
+
+
+{{!-- show details of workout if there are any before the workout title --}}
+<div>
+    <p>{{workoutDetails}}</p>
+</div>
+
+
+
+
+
+
+
+{{!-- on submit, the new exercise is added to the workout details --}}
+<div>
+    <button class="submitExercise">SUBMIT</button>
+</div>
+
+
+{{!-- button with option to assign the workout to a particular day is underneath workout details--}}
+<div>
+    <button class="assignDay">
+    {{!-- list options --}}
+    </button>
+</div>
+
+
+
+{{!-- delete workout button is available at the bottom.  --}}
+<div>
+    <button class="deleteWorkout">DELETE WORKOUT</button>
+</div>
+
+
+{{!-- return to workout schedule button --}}
+<div>
+    <button class="return">RETURN TO WORKOUT SCHEDULE</button>
+</div>
+
+
+
+{{!-- make sure file path is correct --}}
+<script src="./js/workouts.js"></script>
