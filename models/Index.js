@@ -15,8 +15,8 @@ Workout.hasMany(Exercise, {
     foreignKey: 'exercise_id'
 })
   
-Exercise.belongsToMany(Workout, {
-    through: Workout,
+Exercise.belongsTo(Workout, {
+    // through: User,
     foreignKey: 'workout_id'
 })
   
