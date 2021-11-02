@@ -25,6 +25,9 @@ CREATE TABLE exercises (
     workout_id INT
     FOREIGN KEY (workout_id)
     REFERENCES workout(id)
+<<<<<<< HEAD
+);
+=======
 );
 
 
@@ -43,3 +46,4 @@ CREATE TABLE exercises (
 
 -- FUTURE ADDITIONS 
 
+>>>>>>> 471f355a82a7af8fc5d40cf86613ad8c053fafea
