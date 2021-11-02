@@ -28,10 +28,6 @@ CREATE TABLE user (
 --     REFERENCES workout(id)
 -- );
 
-
-
-
--- CREATE TABLE sevenDay (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
 --     day VARCHAR(100) NOT NULL,
 --     workout VARCHAR(100) NOT NULL,
