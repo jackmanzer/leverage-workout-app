@@ -39,14 +39,7 @@ CREATE TABLE exercises (
 --     REFERENCES workout(id)
 --     ON DELETE SET NULL,
 -- );
-<<<<<<< Updated upstream
--- FUTURE ADDITIONS
-
-
-
-=======
 
 
 -- FUTURE ADDITIONS 
->>>>>>> Stashed changes
 
