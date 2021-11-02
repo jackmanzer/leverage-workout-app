@@ -39,8 +39,7 @@ CREATE TABLE exercises (
 --     REFERENCES workout(id)
 --     ON DELETE SET NULL,
 -- );
--- FUTURE ADDITIONS
 
 
-
+-- FUTURE ADDITIONS 
 

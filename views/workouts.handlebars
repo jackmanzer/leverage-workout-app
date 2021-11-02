@@ -3,52 +3,52 @@
 
 {{!-- add exercise button with input field to add a name of the exercise (arm curls, squats, etc--}}
 <div> 
-    <div>
-        <button class="addExercise">ADD EXERCISE</button>
-    </div>
-    <div>
-{{!-- when add exercise button is clicked, then a menu appears --}}
-{{!-- on menu, you can input number of sets, number of reps, and weight lifted --}}
-    </div>
-</div>
+    <form class="styleExerciseForm" id="addExercise">
+        <input type="text" name="exercise" id="exerciseName">
+        <button class="style" name="exerciseNameButton" id="exerciseNameButton">ADD EXERCISE</button>
+        {{!-- these inputs appear when exercise name is added --}}
+        <input type="text" name="sets" id="addSets">
+        <input type="text" name="reps" id="addReps">
+        <input type="text" name="weightAmount" id="weightAmount">
 
+        <button class="style" id="saveExercise">ADD TO WORKOUT</button>
+    </form>
+</div>
 
 {{!-- show details of workout if there are any before the workout title --}}
 <div>
     <p>{{workoutDetails}}</p>
 </div>
-
-
-
-
-
-
-
-{{!-- on submit, the new exercise is added to the workout details --}}
-<div>
-    <button class="submitExercise">SUBMIT</button>
-</div>
-
-
 {{!-- button with option to assign the workout to a particular day is underneath workout details--}}
 <div>
-    <button class="assignDay">
-    {{!-- list options --}}
-    </button>
+    <form class="styleForm" id="assignDay">
+        <input type="checkbox" id="monday">
+        <input type="checkbox" id="tuesday">
+        <input type="checkbox" id="wednesday">
+        <input type="checkbox" id="thursday">
+        <input type="checkbox" id="friday">
+        <input type="checkbox" id="saturday">
+        <input type="checkbox" id="sunday">
+        <button type="submit">ASSIGN DAYS</button>
+    </form>
 </div>
-
-
-
-{{!-- delete workout button is available at the bottom.  --}}
-<div>
-    <button class="deleteWorkout">DELETE WORKOUT</button>
-</div>
-
 
 {{!-- return to workout schedule button --}}
 <div>
-    <button class="return">RETURN TO WORKOUT SCHEDULE</button>
+    <button class="style" id="return">RETURN TO WORKOUT SCHEDULE</button>
 </div>
+
+<div>
+    <button class="style" id="deleteWorkout">DELETE WORKOUT</button>
+</div>
+
+
+
+
+
+
+
+
 
 
 
