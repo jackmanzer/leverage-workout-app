@@ -1,5 +1,5 @@
--- INSERT INTO user (user_title, user_password, user_email)
--- VALUES ("Rock", "pWord123", "rock@on.com");
+INSERT INTO user (user_title, user_password, user_email)
+VALUES ("Rock", "pWord123", "rock@on.com");
 
 
 -- INSERT INTO workout (workout_name, user_id)

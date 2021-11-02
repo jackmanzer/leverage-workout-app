@@ -2,12 +2,12 @@ DROP DATABASE IF EXISTS leverage_db;
 CREATE DATABASE leverage_db;
 USE leverage_db;
 
--- CREATE TABLE user (
---     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
---     user_title VARCHAR(100) NOT NULL,
---     user_password VARCHAR(100) NOT NULL,
---     user_email VARCHAR(100) NOT NULL
--- );
+CREATE TABLE user (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_title VARCHAR(100) NOT NULL,
+    user_password VARCHAR(100) NOT NULL,
+    user_email VARCHAR(100) NOT NULL
+);
 
 -- CREATE TABLE workout (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
