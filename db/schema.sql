@@ -25,4 +25,32 @@ CREATE TABLE exercises (
     workout_id INT
     FOREIGN KEY (workout_id)
     REFERENCES workout(id)
+<<<<<<< HEAD
 );
+=======
+);
+
+
+
+
+-- CREATE TABLE sevenDay (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     day VARCHAR(100) NOT NULL,
+--     workout VARCHAR(100) NOT NULL,
+--     workout_id INT,
+--     FOREIGN KEY (workout_id)
+--     REFERENCES workout(id)
+--     ON DELETE SET NULL,
+-- );
+<<<<<<< Updated upstream
+-- FUTURE ADDITIONS
+
+
+
+=======
+
+
+-- FUTURE ADDITIONS 
+>>>>>>> Stashed changes
+
+>>>>>>> 471f355a82a7af8fc5d40cf86613ad8c053fafea
