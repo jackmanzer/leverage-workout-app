@@ -12,11 +12,12 @@ User.hasMany(Workout, {
 });
   
 Workout.hasMany(Exercise, {
-    foreignKey: 'exercise_id'
+    foreignKey: 'workout_id',
+    onDelete: 'CASCADE'
 })
   
-Exercise.belongsToMany(Workout, {
-    through: Workout,
+Exercise.belongsTo(Workout, {
+    // through: User,
     foreignKey: 'workout_id'
 })
   
