@@ -1,0 +1,132 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Exo+2&display=swap"
+        rel="stylesheet">
+    <title>leverage.com</title>
+    <style> 
+        #signUpBtn:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #signInBtn:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #signUpBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signInBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signInForm {
+            text-align: center;
+            width: 25rem;
+            margin: auto;
+            display: none;
+            background-color: rgba(245, 244, 244, 0.63);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #submitBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signUpForm {
+            text-align: center;
+            width: 40rem;
+            margin: auto;
+            display: none;
+            background-color: rgba(245, 244, 244, 0.63);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #logOutBtn:hover {
+            background-color: rgb(192, 184, 184);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+ <h1 class="text-center text-7xl pt-60" style="font-family: 'Black Ops One', cursive;">
+        l e v e r a g e
+    </h1>
+    <p id="slogan" class="text-center text-2xl">
+        here to help you keep track and reach your goals.
+    </p>
+    <div class="text-center">
+        <button id="signUpBtn"
+            style="width: 23vh; height:6vh; box-shadow: 0 9px rgb(104, 104, 104); font-family: 'Bebas Neue', cursive; transition: 0.5s;"
+            class="startBtn bg-white text-2xl rounded-2xl mt-8">
+            <span>get started</span>
+        </button>
+        <br>
+        <button id="signInBtn"
+            style="width: 23vh; height:6vh; box-shadow: 0 9px rgb(104, 104, 104); font-family: 'Bebas Neue', cursive; transition: 0.5s;"
+            class="startBtn bg-white text-2xl rounded-2xl mt-7">
+            <span>sign in</span>
+        </button>
+        <form id="signInForm" class="bg-white text-center">
+            <label>Email address</label>
+            <br>
+            <input class="w-72 p-1 rounded">
+            <br>
+            <label>Password</label>
+            <br>
+            <input id="password" class="w-72 p-1 rounded">
+            <br>
+            <button id="submitBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
+                class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign in</button>
+        </form>
+
+        <form class="space-y-5" id="signUpForm">
+            <br>
+            <input id="firstName" class="p-1 w-72 rounded" placeholder="First Name">
+            <input id="lastName" class="p-1 w-72 rounded" placeholder="Last Name">
+            <br>
+            <input style="width: 36.125rem;" class="p-1 rounded" placeholder="Email">
+            <br>
+            <input style="width: 36.125rem;" class="p-1 rounded" minlength="8" maxlength="25" id="pass"
+                placeholder="Password">
+            <br>
+            <label>What is your goal?</label>
+            <select class="rounded" id="goal">
+                <option> Lose weight/fat</option>
+                <option>Gain weight/muscle</option>
+                <option>Get lean/toned</option>
+                <option>Lose fat & gain muscle</option>
+                <option>Be healthy</option>
+            </select>
+            <br>
+            <input id="agree" type="checkbox">
+            <a href="termsandcondtions.html">I have read and agreed to the <span class="text-blue-500 underline">Terms
+                    and Conditions</span></a>
+            <br>
+            <button id="signUpFormBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
+                class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign Up</button>
+
+        </form>
+    </div>
+
+</body>

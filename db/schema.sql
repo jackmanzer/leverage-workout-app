@@ -6,25 +6,28 @@ CREATE TABLE user (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_title VARCHAR(100) NOT NULL,
     user_password VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
+    user_email VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE workout (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  workout_name VARCHAR(100) NOT NULL
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    workout_name VARCHAR(100) NOT NULL,
+    user_id INT
+    FOREIGN KEY (user_id)
+    REFERENCES user(id)
 );
 
 CREATE TABLE exercises (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    exercise_name VARCHAR(100) NOT NULL,
     exercise_set INT NOT NULL,
     exercise_reps INT NOT NULL,
     exercise_weight INT NOT NULL,
-    workout_id INT,
+    workout_id INT
     FOREIGN KEY (workout_id)
     REFERENCES workout(id)
-    ON DELETE SET NULL
 );
+
+
 
 
 -- CREATE TABLE sevenDay (
@@ -36,8 +39,7 @@ CREATE TABLE exercises (
 --     REFERENCES workout(id)
 --     ON DELETE SET NULL,
 -- );
--- FUTURE ADDITIONS
 
 
-
+-- FUTURE ADDITIONS 
 
