@@ -47,3 +47,12 @@ CREATE TABLE exercises (
 -- FUTURE ADDITIONS 
 
 >>>>>>> 471f355a82a7af8fc5d40cf86613ad8c053fafea
+
+
+{
+  "exercise_name": "squats",
+  "exercise_set": 1,
+  "exercise_reps": 2,
+  "exercise_weight": 3,
+  "workout_id": 1
+}
