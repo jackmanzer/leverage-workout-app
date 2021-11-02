@@ -12,6 +12,7 @@ CREATE TABLE user (
 CREATE TABLE workout (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     workout_name VARCHAR(100) NOT NULL,
+    user_id INT
     FOREIGN KEY (user_id)
     REFERENCES user(id)
 );
@@ -21,9 +22,12 @@ CREATE TABLE exercises (
     exercise_set INT NOT NULL,
     exercise_reps INT NOT NULL,
     exercise_weight INT NOT NULL,
-    workout_id INT,
+    workout_id INT
     FOREIGN KEY (workout_id)
     REFERENCES workout(id)
+<<<<<<< HEAD
+);
+=======
 );
 
 
@@ -42,3 +46,4 @@ CREATE TABLE exercises (
 
 -- FUTURE ADDITIONS 
 
+>>>>>>> 471f355a82a7af8fc5d40cf86613ad8c053fafea
