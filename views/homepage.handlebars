@@ -7,82 +7,126 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Exo+2&display=swap"
         rel="stylesheet">
     <title>leverage.com</title>
+    <style> 
+        #signUpBtn:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #signInBtn:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #signUpBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signInBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signInForm {
+            text-align: center;
+            width: 25rem;
+            margin: auto;
+            display: none;
+            background-color: rgba(245, 244, 244, 0.63);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #submitBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signUpForm {
+            text-align: center;
+            width: 40rem;
+            margin: auto;
+            display: none;
+            background-color: rgba(245, 244, 244, 0.63);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #logOutBtn:hover {
+            background-color: rgb(192, 184, 184);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <img id="bg" style="width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;" src="https://images.pexels.com/photos/669584/pexels-photo-669584.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
- <nav class="bg-white shadow-lg">
-			<div class="flex justify-between">
-				<div class="flex space-x-7">
-					<!-- Website Logo -->
-		      <span style="font-family: 'Black Ops One', cursive;" class="text-2xl">leverage</span>
-					<!-- Primary Navbar items -->
-					<div class="hidden md:flex items-center ">
-						<a
-							href=""
-							class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold "
-							>Home</a
-						>
-						<a
-							href=""
-							class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
-							>Services</a
-						>
-						<a
-							href=""
-							class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
-							>About</a
-						>
-						<a
-							href=""
-							class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
-							>Contact Us</a
-						>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-</body>
-
-</div>
-    <h1 class="text-center text-6xl pt-40" style="font-family: 'Black Ops One', cursive;">
+ <h1 class="text-center text-7xl pt-60" style="font-family: 'Black Ops One', cursive;">
         l e v e r a g e
     </h1>
-    <p id="slogan" class="text-center">
+    <p id="slogan" class="text-center text-2xl">
         here to help you keep track and reach your goals.
     </p>
-    <div id="center">
-        <button id="signUpBtn" class="startBtn">
+    <div class="text-center">
+        <button id="signUpBtn"
+            style="width: 23vh; height:6vh; box-shadow: 0 9px rgb(104, 104, 104); font-family: 'Bebas Neue', cursive; transition: 0.5s;"
+            class="startBtn bg-white text-2xl rounded-2xl mt-8">
             <span>get started</span>
         </button>
         <br>
-        <button id="signInBtn" class="startBtn">
+        <button id="signInBtn"
+            style="width: 23vh; height:6vh; box-shadow: 0 9px rgb(104, 104, 104); font-family: 'Bebas Neue', cursive; transition: 0.5s;"
+            class="startBtn bg-white text-2xl rounded-2xl mt-7">
             <span>sign in</span>
         </button>
-        <form id="signInForm">
+        <form id="signInForm" class="bg-white text-center">
             <label>Email address</label>
             <br>
-            <input placeholder="johndoe@email.com">
+            <input class="w-72 p-1 rounded">
             <br>
             <label>Password</label>
             <br>
-            <input>
+            <input id="password" class="w-72 p-1 rounded">
             <br>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
+                class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign in</button>
+        </form>
+
+        <form class="space-y-5" id="signUpForm">
+            <br>
+            <input id="firstName" class="p-1 w-72 rounded" placeholder="First Name">
+            <input id="lastName" class="p-1 w-72 rounded" placeholder="Last Name">
+            <br>
+            <input style="width: 36.125rem;" class="p-1 rounded" placeholder="Email">
+            <br>
+            <input style="width: 36.125rem;" class="p-1 rounded" minlength="8" maxlength="25" id="pass"
+                placeholder="Password">
+            <br>
+            <label>What is your goal?</label>
+            <select class="rounded" id="goal">
+                <option> Lose weight/fat</option>
+                <option>Gain weight/muscle</option>
+                <option>Get lean/toned</option>
+                <option>Lose fat & gain muscle</option>
+                <option>Be healthy</option>
+            </select>
+            <br>
+            <input id="agree" type="checkbox">
+            <a href="termsandcondtions.html">I have read and agreed to the <span class="text-blue-500 underline">Terms
+                    and Conditions</span></a>
+            <br>
+            <button id="signUpFormBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
+                class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign Up</button>
+
         </form>
     </div>
-
-    <footer>
-        &copy; The Group 2021 Productions
-    </footer>
 
 </body>
