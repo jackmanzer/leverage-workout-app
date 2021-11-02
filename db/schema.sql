@@ -19,15 +19,13 @@ CREATE TABLE workout (
 
 CREATE TABLE exercises (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    excersise_name VARCHAR(100) NOT NULL,
     exercise_set INT NOT NULL,
     exercise_reps INT NOT NULL,
     exercise_weight INT NOT NULL,
     workout_id INT
     FOREIGN KEY (workout_id)
     REFERENCES workout(id)
-<<<<<<< HEAD
-);
-=======
 );
 
 
@@ -46,4 +44,8 @@ CREATE TABLE exercises (
 
 -- FUTURE ADDITIONS 
 
->>>>>>> 471f355a82a7af8fc5d40cf86613ad8c053fafea
+excersise_name VARCHAR(100) NOT NULL,
+    exercise_set INT NOT NULL,
+    exercise_reps INT NOT NULL,
+    exercise_weight INT NOT NULL,
+    workout_id INT
