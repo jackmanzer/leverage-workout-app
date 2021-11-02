@@ -1,12 +1,15 @@
-INSERT INTO user (user_title, user_password, user_email)
-VALUES ("Rock", "pWord123", "rock@on.com");
+-- INSERT INTO user (user_title, user_password, user_email)
+-- VALUES ("Rock", "pWord123", "rock@on.com");
 
 
-INSERT INTO workout (workout_name)
-VALUES ("Squats");
+-- INSERT INTO workout (workout_name, user_id)
+-- VALUES ("Squats", 1);
 
-INSERT INTO exercises (exercise_name, exercise_set, exercise_reps, exercise_weight, workout_id)
-VALUES ("Squats", 4, 50, 200, 1);
+-- INSERT INTO exercises (exercise_name, exercise_set, exercise_reps, exercise_weight, workout_id)
+-- VALUES ("Squats", 4, 50, 200, 1),
+--        ("lifts", 4, 50, 200, 1),
+--        ("munchies", 4, 50, 200, 1),
+--        ("zzzz's", 4, 50, 200, 1);
 
 
 -- INSERT INTO sevenDay (day, workout, workout_id)

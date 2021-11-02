@@ -12,7 +12,7 @@ User.hasMany(Workout, {
 });
   
 Workout.hasMany(Exercise, {
-    foreignKey: 'exercise_id'
+    foreignKey: 'workout_id'
 })
   
 Exercise.belongsTo(Workout, {
