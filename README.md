@@ -1,14 +1,14 @@
-Leverage: an app to build and track your workouts
+# Leverage
+here to help you keep track and reach your goals
 
+<!-- ## Description  -->
 
-# t8100x
+<!-- ### User Guide -->
+<!-- deployed link -->
 
-hi im jayla
+<!-- ### Built with -->
 
+<!-- ### Ideas for Improvement -->
 
-
-Been eating like Cookie Monster for too long? Get our new app, the t8100x. We will help you pump yourself up. 
-
-
-##Jack made this! 
+<!-- #### License -->
 

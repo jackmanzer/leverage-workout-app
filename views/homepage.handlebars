@@ -52,12 +52,19 @@
             padding: 20px;
             border-radius: 10px;
         }
+      #signUpFormBtn:hover {
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
 
         #logOutBtn:hover {
             background-color: rgb(192, 184, 184);
             color: black;
         }
-
+         #logOutBtn:active{
+            transform: translateY(4px);
+        }
         footer {
             text-align: center;
             position: fixed;
@@ -88,13 +95,10 @@
             <span>sign in</span>
         </button>
         <form id="signInForm" class="bg-white text-center">
-            <label>Email address</label>
+             <input class="w-72 p-1 rounded" placeholder="Email">
             <br>
-            <input class="w-72 p-1 rounded">
             <br>
-            <label>Password</label>
-            <br>
-            <input id="password" class="w-72 p-1 rounded">
+            <input id="password" class="w-72 p-1 rounded" placeholder="Password">
             <br>
             <button id="submitBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
                 class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign in</button>
@@ -123,10 +127,10 @@
             <a href="termsandcondtions.html">I have read and agreed to the <span class="text-blue-500 underline">Terms
                     and Conditions</span></a>
             <br>
-            <button id="signUpFormBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
+            <button id="signUpFormBtn" style="font-family: 'Bebas Neue', cursive;"
                 class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign Up</button>
 
         </form>
     </div>
-
+<script src="../public/js/homepage.js"></script>
 </body>
