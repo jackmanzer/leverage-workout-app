@@ -4,7 +4,7 @@ const Exercise = require('./Exercise');
 
 Workout.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    onDelete: 'CASCADE'
   });
 
 User.hasMany(Workout, {
@@ -12,10 +12,11 @@ User.hasMany(Workout, {
 });
   
 Workout.hasMany(Exercise, {
-    foreignKey: 'workout_id'
+    foreignKey: 'exercise_id'
 })
   
-Exercise.belongsTo(Workout, {
+Exercise.belongsToMany(Workout, {
+    through: Workout,
     foreignKey: 'workout_id'
 })
   
