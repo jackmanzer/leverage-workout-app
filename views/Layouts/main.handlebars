@@ -4,12 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Exo+2&display=swap"
         rel="stylesheet">
 
     <title>leverage.com</title>
+    <style> 
+        #signUpBtn:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #signInBtn:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #signUpBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signInBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signInForm {
+            text-align: center;
+            width: 25rem;
+            margin: auto;
+            display: none;
+            background-color: rgba(245, 244, 244, 0.63);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #submitBtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signUpForm {
+            text-align: center;
+            width: 40rem;
+            margin: auto;
+            display: none;
+            background-color: rgba(245, 244, 244, 0.63);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #logOutBtn:hover {
+            background-color: rgb(192, 184, 184);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +85,5 @@
     <footer>
         &copy; The Group 2021 Productions
     </footer>
-
 </body>
-
 </html>
