@@ -9,7 +9,25 @@ router.get('/', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
+
+router.get('/:id', async (req, res) => {
+  try {
+    const workoutData = await Workout.findByPk(req.params.id, {
+      // JOIN with products
+      include: [{ model: Exercise }]
+    });
+
+    if (!workoutData) {
+      res.status(404).json({ message: 'No workout found with this id!' });
+      return;
+    }
+
+    res.status(200).json(workoutData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/:id', async (req, res) => {
     try {

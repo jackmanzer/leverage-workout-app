@@ -40,3 +40,30 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+
+// {
+// "workout_name": "chest day,"
+// "user_id": 1
+// }
+
+
+// {
+//   "exercise_name": 'bench',
+//   "exercise_set": 1,
+//   "exercise_reps": 2,
+//   "exercise_weight": 3,
+//   "workout_id": 1
+// }
+
+// {
+//   "exercise_name": 'squats',
+//   "exercise_set": 1,
+//   "exercise_reps": 2,
+//   "exercise_weight": 3,
+//   "workout_id": 1
+// }
+
+
+
