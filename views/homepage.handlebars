@@ -69,7 +69,7 @@
 </head>
 
 <body>
- <h1 class="text-center text-7xl pt-60" style="font-family: 'Black Ops One', cursive;">
+    <h1 class="text-center text-7xl pt-60" style="font-family: 'Black Ops One', cursive;">
         l e v e r a g e
     </h1>
     <p id="slogan" class="text-center text-2xl">
@@ -87,14 +87,15 @@
             class="startBtn bg-white text-2xl rounded-2xl mt-7">
             <span>sign in</span>
         </button>
+        
         <form id="signInForm" class="bg-white text-center">
             <label>Email address</label>
             <br>
-            <input class="w-72 p-1 rounded">
+            <input id="email-login" class="w-72 p-1 rounded">
             <br>
             <label>Password</label>
             <br>
-            <input id="password" class="w-72 p-1 rounded">
+            <input id="password-login" class="w-72 p-1 rounded">
             <br>
             <button id="submitBtn" style="transition: 0.3s; font-family: 'Bebas Neue', cursive;"
                 class="bg-white text-black w-20 mt-4 rounded text-xl" type="submit">Sign in</button>
@@ -128,5 +129,5 @@
 
         </form>
     </div>
-
+    <script src="../public/js/login.js"></script>
 </body>
