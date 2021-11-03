@@ -1,7 +1,7 @@
-let workoutDisplayEl = document.querySelector("workout-display");
+let workoutListEl = document.querySelector("workoutList");
 
 function displayWorkoutTable() {
     let workoutNameEl = document.querySelector("workoutName");
 
-    displayWorkoutTable.append(workoutNameEl);
+    displayWorkoutList.append(workoutNameEl);
 }
