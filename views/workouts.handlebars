@@ -1,19 +1,29 @@
+ <nav class="bg-white opacity-95 h-16">
+        <div class="text-6xl text-center pt-1" style="font-family: 'Black Ops One', cursive;">
+            l e v e r a g e
+
+            <button class="bg-black text-white text-2xl p-1 m-3 rounded float-right"
+                style="font-family: 'Bebas Neue', cursive; transition: 0.5s;" id="logOutBtn"> Log Out</button>
+            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+
+    </nav>
+
 <div class="workoutsPage"></div>
 <h1>{{workoutTitle}}</h1>
 
 {{!-- add exercise button with input field to add a name of the exercise (arm curls, squats, etc--}}
-<div> 
-    <form class="styleExerciseForm" id="addExercise">
-        <input type="text" name="exercise" id="exerciseName">
-        <button class="style" name="exerciseNameButton" id="exerciseNameButton">ADD EXERCISE</button>
-        {{!-- these inputs appear when exercise name is added --}}
-        <input type="text" name="sets" id="addSets">
-        <input type="text" name="reps" id="addReps">
-        <input type="text" name="weightAmount" id="weightAmount">
-
-        <button class="style" id="saveExercise">ADD TO WORKOUT</button>
-    </form>
-</div>
+ <div class="text-center"> 
+        <form class="rounded-md w-1/4  mt-50 m-auto p-3 mt-5  " style="background-color: rgba(245, 244, 244, 0.63); " id="addExerciseForm">
+            <input  class="m-1 p-1 w-80 rounded" type="text" name="exercise" id="exerciseName" placeholder='"Deadlifts"'>
+            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white text-black p-1 rounded-md w-28 text-xl" name="exerciseNameButton" id="exerciseNameButton">ADD EXERCISE</button>
+            <!-- {{!-- these inputs appear when exercise name is added --}} -->
+            <input placeholder="3" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="addSets"><label style="font-family: 'Exo 2', sans-serif;" for="addSets">sets</label>
+            <input placeholder="12" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="addReps"><label  style="font-family: 'Exo 2', sans-serif;" for="addReps">reps</label>
+            <input placeholder="25" class="m-1 p-1 w-10 rounded" type="text" name="weightAmount" id="weightAmount"><label style="font-family: 'Exo 2', sans-serif;" for="weightAmount">Weight (lbs)</label>
+            <br>
+            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
+        </form>
+    </div>
 
 {{!-- show details of workout if there are any before the workout title --}}
 <div>
