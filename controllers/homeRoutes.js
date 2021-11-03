@@ -21,9 +21,9 @@ router.get('/schedule', async (req, res) => {
   }
 });
 
-router.get('/workouts', async (req, res) => {
+router.get('/workout', async (req, res) => {
   try {
-    res.render('workout');
+    res.render('workouts');
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
