@@ -1,58 +1,74 @@
+#signUpBtn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
-        #signUpBtn:active {
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
+#signInBtn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
-        #signInBtn:active {
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
+#signUpBtn:hover {
+    background-color: black;
+    color: white;
+}
 
-        #signUpBtn:hover {
-            background-color: black;
-            color: white;
-        }
+#signInBtn:hover {
+    background-color: black;
+    color: white;
+}
 
-        #signInBtn:hover {
-            background-color: black;
-            color: white;
-        }
+#signInForm {
+    text-align: center;
+    width: 25rem;
+    margin: auto;
+    display: none;
+    background-color: rgba(245, 244, 244, 0.63);
+    padding: 20px;
+    border-radius: 10px;
+}
 
-        #signInForm {
-            text-align: center;
-            width: 25rem;
-            margin: auto;
-            display: none;
-            background-color: rgba(245, 244, 244, 0.63);
-            padding: 20px;
-            border-radius: 10px;
-        }
+#submitBtn:hover {
+    background-color: black;
+    color: white;
+}
 
-        #submitBtn:hover {
-            background-color: black;
-            color: white;
-        }
+#signUpForm {
+    text-align: center;
+    width: 40rem;
+    margin: auto;
+    display: none;
+    background-color: rgba(245, 244, 244, 0.63);
+    padding: 20px;
+    border-radius: 10px;
+}
 
-        #signUpForm {
-            text-align: center;
-            width: 40rem;
-            margin: auto;
-            display: none;
-            background-color: rgba(245, 244, 244, 0.63);
-            padding: 20px;
-            border-radius: 10px;
-        }
+#logOutBtn:hover {
+    background-color: rgb(192, 184, 184);
+    color: black;
+}
 
-        #logOutBtn:hover {
-            background-color: rgb(192, 184, 184);
-            color: black;
-        }
+footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
-        footer {
-            text-align: center;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-        }
+#logOutBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#newWorkoutBtn:hover {
+    background-color: rgb(189, 186, 186);
+    color: black;
+}
+
+#verticalLine {
+    border-left: 6px solid rgb(190, 185, 185);
+    width: 90rem;
+    height: 100vh;
+    border-radius: 5px 5px 5px;
+}
