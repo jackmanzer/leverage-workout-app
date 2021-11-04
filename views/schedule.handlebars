@@ -18,23 +18,23 @@
         <div class="m-5 mt-10">
             <div style="width: 26rem;" class="bg-white p-2 rounded-md" id="workoutColumn">
                 <div>
-                    <form class="?" id="addWorkout">
+                    <form class="?" id="addWorkoutForm">
                         <input style="font-family: 'Exo 2', sans-serif;" type="text"
                             class="m-3 w-96 text-2xl p-2 rounded-md border-4 border-gray-300"
-                            placeholder="Tricep Killer " id="workoutName">
+                            placeholder="Tricep Killer " id="workoutInput">
                         <br>
-                        <button id="newWorkoutBtn"
+                        <button type="submit" id="newWorkoutBtn"
                             style="font-family: 'Bebas Neue', cursive; box-shadow: 0 4px rgb(158, 156, 156); transition: 0.3s;"
                             class="saveBtn ml-3 rounded-md w-96 p-1 bg-black text-white text-2xl">ADD WORKOUT</button>
                     </form>
                 </div>
                 <h3 style="font-family: 'Exo 2', sans-serif;" class="text-gray-500 text-2xl text-center"> Saved Workouts
                 </h3>
-                <ul>
+                <ul id="workoutList">
                     {{#each workouts as |workout| }}
                     <li style="font-family: 'Exo 2', sans-serif;"
                         class="bg-gray-400 text-2xl rounded-md w-96 p-1 text-center m-3"><a
-                            href="api/workout/{{id}}">workout_name</a></li>
+                            href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a></li>
                      {{/each}} 
                 </ul>
             </div>
