@@ -19,7 +19,11 @@
         </div>
         <div>
            {{#each workouts as |workout| }}
-            <div><a href="api/workout/{{id}}">{{workout_name}}</a>{</div>
+            <a href="api/workout/{{id}}">
+              <div>
+                <p>{{workout_name}}</p>
+              </div>
+            </a>
            {{/each}}
         </div>
       </div>
