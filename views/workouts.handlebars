@@ -1,28 +1,28 @@
  <button id="backToHome" style="font-family: 'Bebas Neue', cursive; transition: all 0.3s; box-shadow: 0 3px rgb(104, 104, 104);"
         class="bg-white text-black p-1 rounded-md  text-xl m-2" > <span>Back to Workout Schedule </span></button>
 {{!-- workout title --}}
-<h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center ">{{workoutTitle}}</h1>
+<h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center " id="{{id}}" >{{workout_name}}</h1>
 
  <div class="text-center">
         <form class="rounded-md mt-50 m-auto p-3 mt-5"
             style="background-color: rgba(245, 244, 244, 0.63); width: 45em;" id="addExerciseForm">
-            <input class="m-1 p-2 w-96 rounded" type="text" name="exercise" id="exerciseName" placeholder='"Deadlifts"'>
-            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
+            <input class="m-1 p-2 w-96 rounded" type="text" name="exercise" id="exercise_name" placeholder='"Deadlifts"'>
+            {{!-- <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
                 class="bg-white text-black p-1 rounded-md w-28 text-xl" type="submit" name="exerciseNameButton"
-                id="exerciseNameButton">ADD EXERCISE</button>
+                id="exerciseNameButton">ADD EXERCISE</button> --}}
             <br>
            <div id="hiddenForm" >
             <!-- {{!-- these inputs appear when exercise name is added --}} -->
-            <input placeholder="3" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="addSets"><label
-                style="font-family: 'Exo 2', sans-serif;" for="addSets">sets</label>
-            <input placeholder="12" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="addReps"><label
-                style="font-family: 'Exo 2', sans-serif;" for="addReps">reps</label>
-            <input placeholder="25" class="m-1 p-1 w-10 rounded" type="text" name="weightAmount"
-                id="weightAmount"><label style="font-family: 'Exo 2', sans-serif;" for="weightAmount">weight
+            <input placeholder="3" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="exercise_set"><label
+                style="font-family: 'Exo 2', sans-serif;" for="exercise_set">sets</label>
+            <input placeholder="12" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="exercise_reps"><label
+                style="font-family: 'Exo 2', sans-serif;" for="exercise_reps">reps</label>
+            <input placeholder="25" class="m-1 p-1 w-10 rounded" type="text" name="exercise_weight"
+                id="exercise_weight"><label style="font-family: 'Exo 2', sans-serif;" for="exercise_weight">weight
                 (lbs)</label>
             <br>
-            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
-                class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
+            <button type="submit" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
+                class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD Exercise</button>
                 </div>
         </form>
     </div>
@@ -30,7 +30,7 @@
 <div class="text-center m-auto mt-5 rounded-md p-5" style="background-color: rgba(245, 244, 244, 0.63); font-family: 'Exo 2', sans-serif; width: 45em;">
     <ul>
          {{#each exercises }}
-       <li class="text-2xl ">{{ exercise_name }}</li>
+       <li class="text-2xl ">{{ exercise_name }}/SETS:{{exercise_set}}/REPS:{{exercise_reps}}/WEIGHT{{exercise_weight}}lbs</li>
        {{/each}}
     </ul>
 </div>
@@ -78,5 +78,5 @@
 
 
 {{!-- make sure file path is correct --}}
-<script src="./js/workouts.js"></script>
- <script src="./js/logout.js"></script>
+<script src="/js/workouts.js"></script>
+ <script src="/js/logout.js"></script>
