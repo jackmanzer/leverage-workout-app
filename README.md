@@ -2,7 +2,7 @@
 here to help you keep track and reach your goals.
 
 ## Description
-
+  
 ## User Guide 
 <!-- Deployed Link -->
 
@@ -11,11 +11,12 @@ here to help you keep track and reach your goals.
 ### Ideas for Improvement
 
 ### Contributors
-Brian Albright
-Bradley O'Dell
-Jack Manzer
-James Garinger 
-Jayla Newton
+- Brian Albright
+- Bradley O'Dell
+- Jack Manzer
+- James Garinger 
+- Jayla Newton
 
 #### License
+![MIT License](https://img.shields.io/apm/l/PACK?style=plastic)
 
