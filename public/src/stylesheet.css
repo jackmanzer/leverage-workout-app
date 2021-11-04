@@ -72,3 +72,15 @@ footer {
     height: 100vh;
     border-radius: 5px 5px 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .card-deck {
+        flex-direction: column;
+    }
+    #verticalLine {
+        border: none;
+    }
+    #flex {
+        display: block;
+    }
+  }
