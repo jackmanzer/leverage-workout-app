@@ -1,48 +1,72 @@
-   <nav class="bg-white opacity-95 h-16">
-        <div class="text-6xl text-center pt-1" style="font-family: 'Black Ops One', cursive;">
+     <nav class="bg-black opacity-95 h-16">
+        <div id="currentDay" class="text-3xl text-white float-left m-3"></div>
+        <div class="text-6xl text-center pt-1 text-white" style="font-family: 'Black Ops One', cursive;">
             l e v e r a g e
 
-            <button class="bg-black text-white text-2xl p-1 m-3 rounded float-right"
+            <button id="logOutBtn" class="bg-black text-white w-20 text-xl p-1 m-3 rounded float-right"
                 style="font-family: 'Bebas Neue', cursive; transition: 0.5s;" id="logout"> Log Out</button>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                
 
     </nav>
 
+  
+
     <div class="row"></div> 
     {{!-- workout columns --}}
-      <div class="?" id="workoutColumn">
-        <div>
-        <form class="?" id="addWorkout">
-          <input type="text" class="?" id="workoutName">
-          <button class="saveBtn">ADD WORKOUT</button>
-        </form>
+      <div id="flex" class="flex">
+        <div class="m-5 mt-10">
+            <div style="width: 26rem;" class="bg-white p-2 rounded-md" id="workoutColumn">
+                <div>
+                    <form class="?" id="addWorkout">
+                        <input style="font-family: 'Exo 2', sans-serif;" type="text"
+                            class="m-3 w-96 text-2xl p-2 rounded-md border-4 border-gray-300"
+                            placeholder="Tricep Killer " id="workoutName">
+                        <br>
+                        <button id="newWorkoutBtn"
+                            style="font-family: 'Bebas Neue', cursive; box-shadow: 0 4px rgb(158, 156, 156); transition: 0.3s;"
+                            class="saveBtn ml-3 rounded-md w-96 p-1 bg-black text-white text-2xl">ADD WORKOUT</button>
+                    </form>
+                </div>
+                <h3 style="font-family: 'Exo 2', sans-serif;" class="text-gray-500 text-2xl text-center"> Saved Workouts
+                </h3>
+                <ul>
+                    {{#each workouts as |workout| }}
+                    <li style="font-family: 'Exo 2', sans-serif;"
+                        class="bg-gray-400 text-2xl rounded-md w-96 p-1 text-center m-3"><a
+                            href="api/workout/{{id}}">workout_name</a></li>
+                     {{/each}} 
+                </ul>
+            </div>
         </div>
-        <div>
-           {{#each workouts as |workout| }}
-            <div><a href="api/workout/{{id}}">{{workout_name}}</a>{</div>
-           {{/each}}
-        </div>
-      </div>
+         <div id="verticalLine" class="mt-5">
+            <div class="scheduleHeader text-5xl text-white mt-5 pl-5" style="font-family: 'Exo 2', sans-serif;">Schedule
+            </div>
 
       <!--This is for the container that will hold both the current weather and the five day forecast-->
-      <div class="scheduleContainer">
+   <div class="scheduleContainer mt-10">
 
-        <div class="scheduleHeader">
-            <div class="sevenDaySchedule"></div>
-            <div class="?">
-                <div class="card-deck">
-                {{!-- <${generateCards(data)}> --}}
-                <div class="dayCard" id="monday"></div>
-                <div class="dayCard" id="tuesday"></div>
-                <div class="dayCard" id="wednesday"></div>
-                <div class="dayCard" id="thursday"></div>
-                <div class="dayCard" id="friday"></div>
-                <div class="dayCard" id="saturday"></div>
-                <div class="dayCard" id="sunday"></div>
+                <div class="card-deck flex">
+                    <!-- {{!-- <${generateCards(data)}> --}} -->
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="monday">Monday</div>
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="tuesday">Tuesday</div>
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="wednesday">Wednesday</div>
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="thursday">Thursday</div>
+                </div>
+                <div id="dayCard" class="card-deck flex ">
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 "
+                        id="friday">Friday</div>
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="saturday">Saturday</div>
+                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="sunday">Sunday</div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
 
 {{!-- get file path correct here --}}
