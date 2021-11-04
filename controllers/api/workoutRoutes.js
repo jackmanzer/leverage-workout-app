@@ -11,39 +11,33 @@ const { Exercise } = require('../../models');
 //     }
 // });
 
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const workoutData = await Workout.findByPk(req.params.id, {
-//       // JOIN with products
-//       include: [{ model: Exercise }]
-//     });
+router.get('/:id', async (req, res) => {
 
-//     if (!workoutData) {
-//       res.status(404).json({ message: 'No workout found with this id!' });
-//       return;
-//     }
+  try {
+    const workoutData = await Workout.findByPk(req.params.id, {
+      // JOIN with products
+      include: [{ model: Exercise }]
+    });
 
-//     res.status(200).json(workoutData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    console.log(workoutData);
 
-// router.get('/:id', async (req, res) => {
-//     try {
-//       const workoutData = await Workout.findByPk(req.params.id, {
-//         include: [{ model: Exercise }]
-//       });
-//       if (!workoutData) {
-//         res.status(404).json({ message: 'No workout found with this id!' });
-//         return;
-//       }
-//       res.status(200).json(workoutData);
-//     } catch (err) {
-//       res.status(500).json(err);
-//       console.log(err);
-//     }
-//   });
+    if (!workoutData) {
+      res.status(404).json({ message: 'No workout found with this id!' });
+      return;
+    }
+
+    // Serialize data so the template can read it
+    const workout = workoutData.get({ plain: true });
+
+    console.log(workout)
+
+    res.render('workouts', {
+      ...workout,
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.post('/', async (req, res) => {
   console.log("testing");

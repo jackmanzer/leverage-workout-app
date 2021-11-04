@@ -18,12 +18,9 @@
         </form>
         </div>
         <div>
-          <div class="style" id="workoutTable">
-            <h1 class="?" id="savedWorkouts">SAVED WORKOUTS</h1>
-            <ul class="?" id="workoutList">
-              {{!-- buttons append here --}}
-            </ul>
-          </div>
+           {{#each workouts as |workout| }}
+            <div><a href="api/workout/{{id}}">{{workout_name}}</a>{</div>
+           {{/each}}
         </div>
       </div>
 
