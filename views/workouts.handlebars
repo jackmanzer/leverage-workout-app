@@ -10,7 +10,7 @@
 
 <div class="workoutsPage"></div>
 {{!-- <h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center mt-5">Workout Title</h1> --}}
-<h1>{{workoutTitle}}</h1>
+<h1>{{workout_name}}</h1>
 
 {{!-- add exercise button with input field to add a name of the exercise (arm curls, squats, etc--}}
 
@@ -44,9 +44,9 @@
             <li class="text-2xl ">Excersice: sets, reps, weight</li>
         </ul>
     </div> --}}
-<div>
-    <p>{{workoutDetails}}</p>
-</div>
+ {{#each exercises }}
+        <p>{{ exercise_name }}</p>
+ {{/each}}
 {{!-- button with option to assign the workout to a particular day is underneath workout details--}}
 <button id="assignDayBtn" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-3xl mt-5 ">Assign Day</button>
     <div class="text-center">

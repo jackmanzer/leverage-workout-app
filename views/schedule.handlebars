@@ -18,10 +18,9 @@
         </form>
         </div>
         <div>
-          <table class="style" id="workoutTable">
-            <thead class="?" id="savedWorkouts">SAVED WORKOUTS</thead>
-            <tbody class="?" id="workoutList"></tbody>
-          </table>
+           {{#each workouts as |workout| }}
+            <div><a href="api/workout/{{id}}">{{workout_name}}</a>{</div>
+           {{/each}}
         </div>
       </div>
 
