@@ -1,46 +1,76 @@
-// let workoutDisplayEl = document.querySelector("workout-display");
-const workoutInput = documents.querySelector('#workoutName').value;
+let workoutNameEl = document.querySelector("#workoutName");
 
-function displayWorkoutTable() {
-    let workoutNameEl = document.querySelector("#workoutName");
+// displayWorkoutTable.append(workoutNameEl);
 
-    displayWorkoutTable.append(workoutNameEl);
-}
 
 
 
 // const workoutsUl = [];
 
-function createWorkoutsList() {
-    let newWorkoutName = workoutInput.value;
-    let createWorkoutButton = document.createElement('button');
-    createWorkoutButton.textContent = newWorkoutName;
-    workoutsUl.append(workoutNameEl);
-}
+// function createWorkoutsList() {
+// let newWorkoutName = workoutInput.value;
+// let createWorkoutButton = document.createElement('button');
+// createWorkoutButton.textContent = newWorkoutName;
+// workoutsUl.append(workoutNameEl);
+// }
 
 //get workout name from database and create list of all workouts appended to UL
 
 
 const newWorkoutPost = async (event) => {
-    event.preventDefault();
-  
-    const workoutInput = documents.querySelector('#workoutName').value;
+  event.preventDefault();
+  console.log('inside of new workout post function');
 
-    
-    if (workoutInput) {
-        const response = await fetch(`/api/workoutRoutes`, {
-          method: 'POST',
-          body: JSON.stringify(workoutInput),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+  const workoutInput = document.querySelector("#workoutName").value.trim();
+  console.log(workoutInput);
   
-      if (response.ok) {
-        document.location.replace('/schedule');
-      } else {
-        alert('Failed to create workout');
-      }
+  if (workoutInput) {
+    const response = await fetch('/api/workout', {
+      method: "POST",
+      body: JSON.stringify({ workout_name: workoutInput, user_id: this.id }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace("/schedule");
+    } else {
+      alert("Failed to create workout");
     }
+  }
 };
 
+// const newWorkoutPost = async (event) => {
+//     event.preventDefault();
+//     console.log('second query');
+  
+//     const workoutInput = document.querySelector("#workoutName").value.trim();
+//     console.log(workoutInput);
+    
+//     if (workoutInput) {
+//       const response = await fetch('/api/workout', {
+//         method: "GET",
+//         body: JSON.stringify({ workout_name }),
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//       });
+  
+//       if (response.ok) {
+//         document.location.replace("/schedule");
+//       } else {
+//         alert("Failed to create workout");
+//       }
+//     }
+//   };
+
+
+
+document
+  .querySelector('.saveBtn')
+  .addEventListener('click', newWorkoutPost);
+
+// document
+//   .querySelector('.project-list')
+//   .addEventListener('click', delButtonHandler);

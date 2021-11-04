@@ -3,45 +3,84 @@
             l e v e r a g e
 
             <button class="bg-black text-white text-2xl p-1 m-3 rounded float-right"
-                style="font-family: 'Bebas Neue', cursive; transition: 0.5s;" id="logOutBtn"> Log Out</button>
+                style="font-family: 'Bebas Neue', cursive; transition: 0.5s;" id="logout"> Log Out</button>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
 
     </nav>
 
 <div class="workoutsPage"></div>
+{{!-- <h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center mt-5">Workout Title</h1> --}}
 <h1>{{workoutTitle}}</h1>
 
 {{!-- add exercise button with input field to add a name of the exercise (arm curls, squats, etc--}}
- <div class="text-center"> 
-        <form class="rounded-md w-1/4  mt-50 m-auto p-3 mt-5  " style="background-color: rgba(245, 244, 244, 0.63); " id="addExerciseForm">
-            <input  class="m-1 p-1 w-80 rounded" type="text" name="exercise" id="exerciseName" placeholder='"Deadlifts"'>
-            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white text-black p-1 rounded-md w-28 text-xl" name="exerciseNameButton" id="exerciseNameButton">ADD EXERCISE</button>
-            <!-- {{!-- these inputs appear when exercise name is added --}} -->
-            <input placeholder="3" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="addSets"><label style="font-family: 'Exo 2', sans-serif;" for="addSets">sets</label>
-            <input placeholder="12" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="addReps"><label  style="font-family: 'Exo 2', sans-serif;" for="addReps">reps</label>
-            <input placeholder="25" class="m-1 p-1 w-10 rounded" type="text" name="weightAmount" id="weightAmount"><label style="font-family: 'Exo 2', sans-serif;" for="weightAmount">Weight (lbs)</label>
+
+ <div class="text-center">
+        <form class="rounded-md mt-50 m-auto p-3 mt-5  "
+            style="background-color: rgba(245, 244, 244, 0.63); width: 45em;" id="addExerciseForm">
+            <input class="m-1 p-2 w-96 rounded" type="text" name="exercise" id="exerciseName" placeholder='"Deadlifts"'>
+            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
+                class="bg-white text-black p-1 rounded-md w-28 text-xl" name="exerciseNameButton"
+                id="exerciseNameButton">ADD EXERCISE</button>
             <br>
-            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
+
+            <!-- {{!-- these inputs appear when exercise name is added --}} -->
+            <input placeholder="3" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="addSets"><label
+                style="font-family: 'Exo 2', sans-serif;" for="addSets">sets</label>
+            <input placeholder="12" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="addReps"><label
+                style="font-family: 'Exo 2', sans-serif;" for="addReps">reps</label>
+            <input placeholder="25" class="m-1 p-1 w-10 rounded" type="text" name="weightAmount"
+                id="weightAmount"><label style="font-family: 'Exo 2', sans-serif;" for="weightAmount">Weight
+                (lbs)</label>
+            <br>
+            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
+                class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
         </form>
     </div>
 
 {{!-- show details of workout if there are any before the workout title --}}
+{{!-- <div class="text-center m-auto mt-5 rounded-md p-5"
+        style="background-color: rgba(245, 244, 244, 0.63); font-family: 'Exo 2', sans-serif; width: 45em;">
+        <ul>
+            <li class="text-2xl ">Excersice: sets, reps, weight</li>
+        </ul>
+    </div> --}}
 <div>
     <p>{{workoutDetails}}</p>
 </div>
 {{!-- button with option to assign the workout to a particular day is underneath workout details--}}
-<div>
-    <form class="styleForm" id="assignDay">
-        <input type="checkbox" id="monday">
-        <input type="checkbox" id="tuesday">
-        <input type="checkbox" id="wednesday">
-        <input type="checkbox" id="thursday">
-        <input type="checkbox" id="friday">
-        <input type="checkbox" id="saturday">
-        <input type="checkbox" id="sunday">
-        <button type="submit">ASSIGN DAYS</button>
-    </form>
-</div>
+<button id="assignDayBtn" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-3xl mt-5 ">Assign Day</button>
+    <div class="text-center">
+    <!-- ASSIGN DAYS FORM -->
+        <form style="background-color: rgba(245, 244, 244, 0.63); width: 45em;" class="m-5 p-5 rounded-md m-auto mt-5"
+            id="assignDay">
+            <label style="font-family: 'Exo 2', sans-serif;" class="text-2xl">Which day(s) would you like to do this
+                workout?</label>
+            <br>
+            <input class="m-2" type="checkbox" id="monday">
+            <label>Monday</label>
+            <br>
+            <input class="m-2" type="checkbox" id="tuesday">
+            <label>Tuesday</label>
+            <br>
+            <input class="m-2" type="checkbox" id="wednesday">
+            <label>Wednesday</label>
+            <br>
+            <input class="m-2" type="checkbox" id="thursday">
+            <label>Thursday</label>
+            <br>
+            <input class="m-2" type="checkbox" id="friday">
+            <label>Friday</label>
+            <br>
+            <input class="m-2" type="checkbox" id="saturday">
+            <label>Saturday</label>
+            <br>
+            <input class="m-2" type="checkbox" id="sunday">
+            <label>Sunday</label>
+            <br>
+            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 4px rgb(104, 104, 104);"
+                class="bg-white text-black rounded-md p-1 m-2 w-28 text-xl" type="submit">ASSIGN DAYS</button>
+        </form>
+    </div>
 
 {{!-- return to workout schedule button --}}
 <div>
@@ -55,3 +94,4 @@
 
 {{!-- make sure file path is correct --}}
 <script src="./js/workouts.js"></script>
+ <script src="./js/logout.js"></script>

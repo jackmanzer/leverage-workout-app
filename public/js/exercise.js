@@ -8,7 +8,7 @@ const newExerciseForm = async (event) => {
     const workout_id = document.querySelector('#workout_id').value.trim();
   
     if (exercise_name && exercise_set && exercise_reps && exercise_weight && workout_id) {
-      const response = await fetch(`/api/projects`, {
+      const response = await fetch(`/api/exercise`, {
         method: 'POST',
         body: JSON.stringify({ exercise_name, exercise_set, exercise_reps, exercise_weight, workout_id }),
         headers: {
@@ -26,4 +26,4 @@ const newExerciseForm = async (event) => {
 
   document
   .querySelector('.new-exercise-form')
-  .addEventListener('submit', newExerciseForm);
+  .addEventListener('click', newExerciseForm);

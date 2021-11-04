@@ -5,7 +5,25 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
    
+    res.render('homepage');
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err);
+  }
+});
+
+router.get('/schedule', async (req, res) => {
+  try {
     res.render('schedule');
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err);
+  }
+});
+
+router.get('/workout', async (req, res) => {
+  try {
+    res.render('workouts');
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
