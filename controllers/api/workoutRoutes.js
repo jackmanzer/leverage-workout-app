@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
     // Serialize data so the template can read it
     const workout = workoutData.get({ plain: true });
 
-    console.log(workout)
+    
 
     res.render('workouts', {
       ...workout,
@@ -42,8 +42,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       const newWorkout = await Workout.create({
-        ...req.body
+        ...req.body, user_id: req.session.user_id
       });
+     
   
       res.status(200).json(newWorkout);
     } catch (err) {
