@@ -1,3 +1,4 @@
+/* landing page style */
 #signUpBtn:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -55,7 +56,58 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* workout page */
+#backToHome span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
 
+#backToHome span:after {
+    content: '\2190';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 20px;
+    transition: 0.2s;
+}
+
+#backToHome:hover {
+    background-color: black;
+    color: white;
+}
+
+#backToHome:hover span {
+    padding-left: 25px;
+}
+
+#backToHome:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
+#logOutBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#hiddenForm {
+    display: none;
+}
+
+
+#assignDayForm {
+    display: none;
+}
+
+#deleteWorkout:hover {
+    background-color: white;
+    color: brown;
+}
+
+
+/* SCHEDULE HANDLEBARS */
 #logOutBtn:hover {
     background-color: white;
     color: black;
@@ -73,14 +125,33 @@ footer {
     border-radius: 5px 5px 5px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .card-deck {
-        flex-direction: column;
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     }
     #verticalLine {
         border: none;
     }
     #flex {
-        display: block;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .scheduleHeader {
+        text-align: center;
     }
   }
+
+@media only screen and (min-width: 751px) {
+    .card-deck {
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+}
