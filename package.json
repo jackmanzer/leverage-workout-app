@@ -4,7 +4,7 @@
   "description": "Been eating like Cookie Monster for too long? Get our new app, the t8100x. We will help you pump yourself up.",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwind build public/src/style.css -o public/dist/style.css"
+    "build:css": "tailwind build public/src/style.css -o public/dist/style.css",
     "start": "node server.js"
   },
   "repository": {
