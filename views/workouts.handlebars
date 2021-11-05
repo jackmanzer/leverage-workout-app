@@ -1,43 +1,44 @@
  <a href="/schedule">
  <button id="backToHome" style="font-family: 'Bebas Neue', cursive; transition: all 0.3s; box-shadow: 0 3px rgb(104, 104, 104);"
-        class="bg-white text-black p-1 rounded-md  text-xl m-2" > <span>Back to Workout Schedule </span></button></a>
+        class="bg-white text-black p-1 rounded-md  text-xl m-2" > <span>Back to Workout Schedule </span></button>
+        </a>
 {{!-- workout title --}}
-<h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center ">{{workoutTitle}}</h1>
+<h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center " id="{{id}}" >{{workout_name}}</h1>
 
- <div class="text-center">
-        <form class="rounded-md mt-50 m-auto p-3 mt-5"
+ <div id="entireForm" class="text-center flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <form class="rounded-md mt-50 m-auto p-3 mt-5  "
             style="background-color: rgba(245, 244, 244, 0.63); width: 45em;" id="addExerciseForm">
-            <input class="m-1 p-2 w-96 rounded" type="text" name="exercise" id="exerciseName" placeholder='"Deadlifts"'>
+            <input class="m-1 p-2 w-96 rounded" type="text" name="exercise" id="exercise_name" placeholder='"Deadlifts"'>
             <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
                 class="bg-white text-black p-1 rounded-md w-28 text-xl" type="submit" name="exerciseNameButton"
                 id="exerciseNameButton">ADD EXERCISE</button>
             <br>
-           <div id="hiddenForm" >
-            <!-- {{!-- these inputs appear when exercise name is added --}} -->
-            <input placeholder="3" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="addSets"><label
-                style="font-family: 'Exo 2', sans-serif;" for="addSets">sets</label>
-            <input placeholder="12" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="addReps"><label
-                style="font-family: 'Exo 2', sans-serif;" for="addReps">reps</label>
-            <input placeholder="25" class="m-1 p-1 w-10 rounded" type="text" name="weightAmount"
-                id="weightAmount"><label style="font-family: 'Exo 2', sans-serif;" for="weightAmount">weight
-                (lbs)</label>
-            <br>
-            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
-                class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
-                </div>
+            <div id="hiddenForm">
+                <!-- {{!-- these inputs appear when exercise name is added --}} -->
+                <input placeholder="sets" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="exercise_set">
+                <input placeholder="reps" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="exercise_reps">
+                <input placeholder="weight (lbs)" class="m-1 p-1 w-24 rounded" type="text" name="weightAmount"
+                    id="exercise_weight">
+                <br>
+                <button
+                    style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
+                    class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
+            </div>
         </form>
     </div>
-
-<div class="text-center m-auto mt-5 rounded-md p-5" style="background-color: rgba(245, 244, 244, 0.63); font-family: 'Exo 2', sans-serif; width: 45em;">
-    <ul>
-         {{#each exercises }}
-       <li class="text-2xl ">{{ exercise_name }}</li>
-       {{/each}}
-    </ul>
-</div>
+    <div id="workoutDets" class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="text-center m-auto mt-5 rounded-md p-5"
+            style="background-color: rgba(245, 244, 244, 0.63); font-family: 'Exo 2', sans-serif; width: 45em;">
+            <ul>
+              {{#each exercises }}
+                <li class="text-2xl ">{{ exercise_name }}/SETS:{{exercise_set}}/REPS:{{exercise_reps}}/WEIGHT{{exercise_weight}}lbs</li>
+              {{/each}}
+            </ul>
+       </div>
+    </div>
 {{!-- button with option to assign the workout to a particular day is underneath workout details--}}
-    <div class="text-center">
-    <!-- ASSIGN DAYS FORM -->
+    <div id="div4AssDay" class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+       <!-- ASSIGN DAYS FORM -->
         <form style="background-color: rgba(245, 244, 244, 0.63); width: 45em;" class="m-5 p-5 rounded-md m-auto mt-5"
             id="assignDayForm">
             <label style="font-family: 'Exo 2', sans-serif;" class="text-2xl">Which day(s) would you like to do this
@@ -67,6 +68,7 @@
             <button id='daysSubmitBtn' style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 4px rgb(104, 104, 104);"
                 class="bg-white text-black rounded-md p-1 m-2 w-28 text-xl" type="submit">Submit</button>
         </form>
+    
     </div>
 <button id="assignDayBtn" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-3xl mt-5 ">Assign Day</button>
 
@@ -79,5 +81,5 @@
 
 
 {{!-- make sure file path is correct --}}
-<script src="./js/workouts.js"></script>
- <script src="./js/logout.js"></script>
+<script src="/js/workouts.js"></script>
+ <script src="/js/logout.js"></script>

@@ -1,0 +1,6 @@
+<select class="mt-5 rounded-md p-3 text-xl" name="workout_name" id="workout_name">
+   <option default>Choose Workout</option>
+    {{#each workouts as |workout|}}
+  <option value="{{workout_name}}">{{workout_name}}</option>
+  {{/each}}
+</select>
