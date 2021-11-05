@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:css": "tailwind build public/src/style.css -o public/dist/style.css"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
