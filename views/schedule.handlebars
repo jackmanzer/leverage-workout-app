@@ -44,23 +44,36 @@
    <div class="scheduleContainer mt-10">
 
                 <div class="card-deck flex">
-                    <!-- {{!-- <${generateCards(data)}> --}} -->
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="monday">Monday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="tuesday">Tuesday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="wednesday">Wednesday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="thursday">Thursday</div>
+                    <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52" id="monday">
+                        <h1>Monday</h1>
+                        {{>dropdown}}
+                    </div>
+                    <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52" id="tuesday">
+                        <h1>Tuesday</h1>
+                        {{>dropdown}}
+                    </div>
+                    <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52" id="wednesday">
+                       <h1>Wednesday</h1>
+                       {{>dropdown}}
+                    </div>
+                    <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52" id="thursday">
+                        <h1>Thursday</h1>
+                        {{>dropdown}}
+                    </div>
                 </div>
-                <div id="dayCard" class="card-deck flex ">
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 "
-                        id="friday">Friday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="saturday">Saturday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="sunday">Sunday</div>
+                <div class="card-deck flex ">
+                    <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 " id="friday">
+                       <h1>Friday</h1> 
+                       {{>dropdown}}
+                    </div>
+                    <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 " id="friday">
+                       <h1>Saturday</h1> 
+                       {{>dropdown}}
+                    </div>
+                     <div class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 " id="friday">
+                       <h1>Sunday</h1> 
+                       {{>dropdown}}
+                    </div>
                 </div>
             </div>
         </div>
