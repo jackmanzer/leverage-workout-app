@@ -1,5 +1,6 @@
+ <a href="/schedule">
  <button id="backToHome" style="font-family: 'Bebas Neue', cursive; transition: all 0.3s; box-shadow: 0 3px rgb(104, 104, 104);"
-        class="bg-white text-black p-1 rounded-md  text-xl m-2" > <span>Back to Workout Schedule </span></button>
+        class="bg-white text-black p-1 rounded-md  text-xl m-2" > <span>Back to Workout Schedule </span></button></a>
 {{!-- workout title --}}
 <h1 style="font-family: 'Black Ops One', cursive;" class="text-5xl text-white text-center ">{{workoutTitle}}</h1>
 
@@ -42,29 +43,29 @@
             <label style="font-family: 'Exo 2', sans-serif;" class="text-2xl">Which day(s) would you like to do this
                 workout?</label>
             <br>
-            <input class="m-2" type="checkbox" id="monday">
+            <input class="m-2" type="checkbox" id="monday dayCheckbox">
             <label>Monday</label>
             <br>
-            <input class="m-2" type="checkbox" id="tuesday">
+            <input class="m-2" type="checkbox" id="tuesday dayCheckbox">
             <label>Tuesday</label>
             <br>
-            <input class="m-2" type="checkbox" id="wednesday">
+            <input class="m-2" type="checkbox" id="wednesday dayCheckbox">
             <label>Wednesday</label>
             <br>
-            <input class="m-2" type="checkbox" id="thursday">
+            <input class="m-2" type="checkbox" id="thursday dayCheckbox">
             <label>Thursday</label>
             <br>
-            <input class="m-2" type="checkbox" id="friday">
+            <input class="m-2" type="checkbox" id="friday dayCheckbox">
             <label>Friday</label>
             <br>
-            <input class="m-2" type="checkbox" id="saturday">
+            <input class="m-2" type="checkbox" id="saturday dayCheckbox">
             <label>Saturday</label>
             <br>
-            <input class="m-2" type="checkbox" id="sunday">
+            <input class="m-2" type="checkbox" id="sunday dayCheckbox">
             <label>Sunday</label>
             <br>
-            <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 4px rgb(104, 104, 104);"
-                class="bg-white text-black rounded-md p-1 m-2 w-28 text-xl" type="submit">ASSIGN DAYS</button>
+            <button id='daysSubmitBtn' style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 4px rgb(104, 104, 104);"
+                class="bg-white text-black rounded-md p-1 m-2 w-28 text-xl" type="submit">Submit</button>
         </form>
     </div>
 <button id="assignDayBtn" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-3xl mt-5 ">Assign Day</button>

@@ -42,3 +42,46 @@ const newExerciseForm = async (event) => {
   document
   .querySelector('.new-exercise-form')
   .addEventListener('submit', newExerciseForm);
+
+  //grabs submit button on workout page
+  // const checkedDaysSubmit = document.querySelector('#daysSubmmitBtn');
+  
+  // //grabs check boxes from workout page
+  // const daySelected = document.querySelector('#monday:checked');
+  // const daySelected = document.querySelector('#tuesday:checked');
+  // const daySelected = document.querySelector('#wednesday:checked');
+  // const daySelected = document.querySelector('#thursday:checked');
+  // const daySelected = document.querySelector('#friday:checked');
+  // const daySelected = document.querySelector('#saturday:checked');
+  // const daySelected = document.querySelector('#sunday:checked');
+  
+  // //grabs each day card from schedule page
+  // const mondayDiv = document.querySelector('#mondayDiv');
+  // const mondayDiv = document.querySelector('#tuesdayDiv');
+  // const mondayDiv = document.querySelector('#wednesdayDiv');
+  // const mondayDiv = document.querySelector('#thursdayDiv');
+  // const mondayDiv = document.querySelector('#fridayDiv');
+  // const mondayDiv = document.querySelector('#saturdayDiv');
+  // const mondayDiv = document.querySelector('#sundayDiv'); 
+  
+  // checkedDaysSubmit.addEventListener('click', function(){
+  //    daySelected ? 
+  //   : false;
+  // })
+
+  // function getFee(isMember) {
+  //   return (isMember ? '$2.00' : '$10.00');
+  // }
+
+  const dayCards = document.querySelector('#dayCard');
+  
+
+  // <input type='checkbox' onchange='handleChange(this);'> Checkbox
+
+function handleChange(checkbox) {
+    if(checkbox.checked == true){
+        document.getElementById("submit").removeAttribute("disabled");
+    }else{
+        document.getElementById("submit").setAttribute("disabled", "disabled");
+   }
+}

@@ -48,22 +48,57 @@
 
                 <div class="card-deck flex">
                     <!-- {{!-- <${generateCards(data)}> --}} -->
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="monday">Monday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="tuesday">Tuesday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="wednesday">Wednesday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="thursday">Thursday</div>
+                    <div id="dayCard mondayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="monday">
+                        Monday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
+                    <div id="dayCard tuesdayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="tuesday">
+                        Tuesday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
+                    <div id="dayCard wednesdayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="wednesday">
+                        Wednesday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
+                    <div id="dayCard thursdayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="thursday">
+                        Thursday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
                 </div>
                 <div id="dayCard" class="card-deck flex ">
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 "
-                        id="friday">Friday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="saturday">Saturday</div>
-                    <div id="dayCard" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
-                        id="sunday">Sunday</div>
+                    <div id="dayCard fridayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52 "
+                        id="friday">
+                        Friday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
+                    <div id="dayCard saturdayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="saturday">
+                        Saturday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
+                    <div id="dayCard sundayDiv" class="rounded-xl text-2xl m-5 bg-gray-300 p-2 text-center underline w-72 h-52"
+                        id="sunday">
+                        Sunday
+                        <p>
+                          <a href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

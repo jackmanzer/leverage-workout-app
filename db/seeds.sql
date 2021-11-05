@@ -1,5 +1,7 @@
 -- INSERT INTO user (user_first_name, user_last_name, user_password, user_email)
 -- VALUES ("", "pWord123", "rock@on.com");
+-- USE leverage_db;
+
 
 
 -- INSERT INTO workout (workout_name, user_id)
