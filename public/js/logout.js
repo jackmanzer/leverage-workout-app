@@ -10,6 +10,6 @@ const logout = async () => {
     } else {
       alert(response.statusText);
     }
-  };
+};
   
 document.querySelector('#logOutBtn').addEventListener('click', logout);
