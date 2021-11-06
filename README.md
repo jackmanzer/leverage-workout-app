@@ -107,10 +107,5 @@ After clicking on one of your created workout buttons, you will be directed to t
 ### Contribute!
 If you would like to make a contribution to this application or have any suggestions, feel free to
 <a href="mailto:jacklovestombrady@gmail.com" target="_blank">Contact Us!</a>
- 
-
-
-
-
 
 
