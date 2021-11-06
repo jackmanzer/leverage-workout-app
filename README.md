@@ -52,7 +52,7 @@ If you have already created a account from previously visiting our application, 
 
 4. __Create Workout__
 
- Once you have clicked your workouts name you will then be redirected to your new workouts page, where you can add exercises! To add an exercise you just have to enter the new exercise's name in the given input field next to the 'Add Exercise' button. You may then click that button to populate the rest of the form so you can add the set, reps, and weight. Once you're finished you may click the 'Add to workout' button and your new exercise will populate below! You can add as many exercises as you want!
+Once you have clicked your workouts name you will then be redirected to your new workouts page, where you can add exercises! To add an exercise you just have to enter the new exercise's name in the given input field next to the 'Add Exercise' button. You may then click that button to populate the rest of the form so you can add the set, reps, and weight. Once you're finished you may click the 'Add to workout' button and your new exercise will populate below! You can add as many exercises as you want!
 
 - Enter a name of workout you want to create in form on left hand side of the page.
 - Click the ADD WORKOUT button to create a button and add it to the list of workout buttons located underneath.

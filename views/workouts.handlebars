@@ -11,18 +11,21 @@
             <input class="m-1 p-2 w-96 rounded" type="text" name="exercise" id="exercise_name" placeholder='"Deadlifts"'>
             <button style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
                 class="bg-white text-black p-1 rounded-md w-28 text-xl" type="submit" name="exerciseNameButton"
-                id="exerciseNameButton">ADD EXERCISE</button>
+                id="exerciseNameButton">
+                ADD EXERCISE
+            </button>
             <br>
             <div id="hiddenForm">
                 <!-- {{!-- these inputs appear when exercise name is added --}} -->
                 <input placeholder="sets" class="m-1 p-1 w-10 rounded" type="text" name="sets" id="exercise_set">
                 <input placeholder="reps" class="m-1 p-1 w-10 rounded" type="text" name="reps" id="exercise_reps">
-                <input placeholder="weight (lbs)" class="m-1 p-1 w-24 rounded" type="text" name="weightAmount"
-                    id="exercise_weight">
+                <input placeholder="weight (lbs)" class="m-1 p-1 w-24 rounded" type="text" name="weightAmount"id="exercise_weight">
                 <br>
                 <button
                     style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
-                    class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">ADD TO WORKOUT</button>
+                    class="bg-white p-1 rounded-md text-xl mt-1" id="saveExercise">
+                    ADD TO WORKOUT
+                </button>
             </div>
         </form>
     </div>
@@ -31,7 +34,7 @@
             style="background-color: rgba(245, 244, 244, 0.63); font-family: 'Exo 2', sans-serif; width: 45em;">
             <ul>
               {{#each exercises }}
-                <li class="text-2xl ">{{ exercise_name }}/SETS:{{exercise_set}}/REPS:{{exercise_reps}}/WEIGHT{{exercise_weight}}lbs</li>
+                <li class="text-2xl ">{{ exercise_name }}: {{exercise_set}} sets, {{exercise_reps}} reps, {{exercise_weight}} lbs</li>
               {{/each}}
             </ul>
        </div>
@@ -62,24 +65,27 @@
             <input class="m-2" type="checkbox" id="saturday dayCheckbox">
             <label>Saturday</label>
             <br>
-            <input class="m-2" type="checkbox" id="sunday dayCheckbox">
+            <input class="m-2" type="checkbox" id="sunday">
             <label>Sunday</label>
             <br>
-            <button id='daysSubmitBtn' style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 4px rgb(104, 104, 104);"
-                class="bg-white text-black rounded-md p-1 m-2 w-28 text-xl" type="submit">Submit</button>
+            <button id='daysSubmitBtn' style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 4px rgb(104, 104, 104);"class="bg-white text-black rounded-md p-1 m-2 w-28 text-xl" type="submit">
+                Submit
+            </button>
         </form>
     
     </div>
-<button id="assignDayBtn" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-3xl mt-5 ">Assign Day</button>
+{{!-- <button id="assignDayBtn" style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);" class="bg-white p-1 rounded-md text-3xl mt-5 ">
+    Assign Day
+</button> --}}
 
-<div>
+{{!-- <div>
    <button id="deleteWorkout"
         style="font-family: 'Bebas Neue', cursive; transition: 0.5s; box-shadow: 0 3px rgb(104, 104, 104);"
         class="bg-red-800 text-white p-2 rounded-md text-2xl mt-20 mr-52 float-right">
         Delete Workout</button>
-</div>
+</div> --}}
 
 
 {{!-- make sure file path is correct --}}
 <script src="/js/workouts.js"></script>
- <script src="/js/logout.js"></script>
+{{!-- <script src="/js/logout.js"></script> --}}
